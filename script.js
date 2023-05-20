@@ -14,4 +14,14 @@ window.onload = function() {
       console.log('Starting the game...');
     });
   };
+  document.addEventListener('DOMContentLoaded', function() {
+    var audio = new Audio('bg.mp3'); // แทนที่ "music.mp3" ด้วย URL เพลงของคุณ
+    audio.loop = true; // ตั้งค่าให้เล่นวนซ้ำ
+    audio.play(); // เริ่มเล่นเพลง
+    
+    // เมื่อผู้ใช้คลิกเริ่มเกม
+    document.getElementById('start-button').addEventListener('click', function() {
+      audio.pause(); // หยุดเล่นเพลง
+    });
+  });
   
